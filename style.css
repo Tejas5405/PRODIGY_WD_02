@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* Animated background elements */
+
+body::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient( circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+    animation: float 20s ease-in-out infinite;
+    pointer-events: none;
+}
+
+@keyframes float {
+    0%,
+    100% {
+        transform: translate(0, 0) rotate(0deg);
+    }
+    25% {
+        transform: translate(10px, -10px) rotate(90deg);
+    }
+    50% {
+        transform: translate(-5px, 10px) rotate(180deg);
+    }
+    75% {
+        transform: translate(-10px, -5px) rotate(270deg);
+    }
+}
+
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(20px);
+    backdrop-filter: blur(20px);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.2);
+    min-width: 350px;
+    position: relative;
+    z-index: 1;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h1 {
+    color: #2d3748;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.time {
+    font-size: 4rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+    color: #2d3748;
+    font-family: "Courier New", "Monaco", monospace;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 2px;
+}
+
+.buttons {
+    margin-bottom: 30px;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.buttons button {
+    padding: 15px 25px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.buttons button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient( 90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s;
+}
+
+.buttons button:hover::before {
+    left: 100%;
+}
+
+.buttons button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.buttons button:active {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#start {
+    background: linear-gradient(135deg, #48bb78, #38a169);
+    color: white;
+}
+
+#start:hover {
+    background: linear-gradient(135deg, #38a169, #2f855a);
+}
+
+#pause {
+    background: linear-gradient(135deg, #ed8936, #dd6b20);
+    color: white;
+}
+
+#pause:hover {
+    background: linear-gradient(135deg, #dd6b20, #c05621);
+}
+
+#reset {
+    background: linear-gradient(135deg, #f56565, #e53e3e);
+    color: white;
+}
+
+#reset:hover {
+    background: linear-gradient(135deg, #e53e3e, #c53030);
+}
+
+#lap {
+    background: linear-gradient(135deg, #9f7aea, #805ad5);
+    color: white;
+}
+
+#lap:hover {
+    background: linear-gradient(135deg, #805ad5, #6b46c1);
+}
+
+#laps {
+    list-style: none;
+    margin-top: 30px;
+    padding-left: 0;
+    max-height: 250px;
+    overflow-y: auto;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#laps::-webkit-scrollbar {
+    width: 8px;
+}
+
+#laps::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+#laps::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    border-radius: 4px;
+}
+
+#laps li {
+    background: rgba(255, 255, 255, 0.9);
+    margin: 8px 0;
+    padding: 15px;
+    border-radius: 10px;
+    border-left: 4px solid #667eea;
+    font-family: "Courier New", "Monaco", monospace;
+    font-weight: 600;
+    font-size: 14px;
+    color: #2d3748;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+#laps li:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Responsive design */
+
+@media (max-width: 480px) {
+    .container {
+        padding: 30px 20px;
+        margin: 20px;
+        min-width: 280px;
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    .time {
+        font-size: 2.5rem;
+    }
+    .buttons {
+        gap: 10px;
+    }
+    .buttons button {
+        padding: 12px 20px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 360px) {
+    .container {
+        padding: 25px 15px;
+    }
+    .time {
+        font-size: 2rem;
+    }
+    .buttons button {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+}
