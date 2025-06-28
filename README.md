@@ -53,6 +53,11 @@
 
 https://github.com/Tejas5405/PRODIGY_WD_02
 
+## Live Demo:
+https://tejas5405.github.io/PRODIGY_WD_02/
+
+
+
 ---
 
 _Built with ❤️ for Prodigy InfoTech Web Development Internship_
