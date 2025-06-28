@@ -51,11 +51,11 @@
 
 ## 🔗 Live Demo
 
-[Add your GitHub Pages link here]
+https://tejas5405.github.io/PRODIGY_WD_02/
 
 ## 📂 GitHub Repository
 
-[Add your GitHub repo link here]
+https://github.com/Tejas5405/PRODIGY_WD_02
 
 ---
 
