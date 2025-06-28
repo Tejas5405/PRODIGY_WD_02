@@ -49,10 +49,6 @@
 - Professional typography
 - Shadow effects for depth
 
-## 🔗 Live Demo
-
-https://tejas5405.github.io/PRODIGY_WD_02/
-
 ## 📂 GitHub Repository
 
 https://github.com/Tejas5405/PRODIGY_WD_02
