@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Task-02: Stopwatch Web Application
 
 ⏱ Built a simple stopwatch using HTML, CSS, and JavaScript as part of my internship at Prodigy InfoTech.
@@ -61,6 +60,3 @@ https://tejas5405.github.io/PRODIGY_WD_02/
 ---
 
 _Built with ❤️ for Prodigy InfoTech Web Development Internship_
-=======
-# PRODIGY_WD_02
->>>>>>> a79ccd4a569ce88b2582e1ca7bb52232a9a3afb1
